@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampada</title>
+</head>
+<style>
+
+/*PRA CENTRALIZAR O CONTEUDO*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #090B1F;
+  color: #fff;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 5px;
+}
+
+</style>
+
+<body>
+    <h2>Lâmpada HTML/CSS/JS</h2>
+    <div>
+        <img src="desligada.png" alt="" id="lamp">
+    </div>
+    <div>
+        <button id="ligar">Ligar</button>
+        <button id="desligar">Desligar</button>
+    </div>
+</body>
+<script>
+
+  const ligar = document.getElementById('ligar');
+  const desligar = document.getElementById('desligar')
+  const lamp = document.getElementById('lamp');
+
+  function ligarLamp() {
+    lamp.src = 'ligada.png';
+    document.body.style.backgroundColor = "#FFFE05"
+    document.body.style.color = "#171717"
+  }
+
+  function desligarLamp() {
+    lamp.src = 'desligada.png';
+    document.body.style.backgroundColor = "#090B1F"
+    document.body.style.color = "#FFF"
+  }
+  
+  ligar.addEventListener('click', ligarLamp);
+  desligar.addEventListener('click', desligarLamp)
+
+
+</script>
+</html>
